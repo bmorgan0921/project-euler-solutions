@@ -1,4 +1,5 @@
 '''
+url: https://projecteuler.net/problem=4
 Largest palindrome product
 
 Problem 4
@@ -17,9 +18,9 @@ def solution(a,b):
             str_mult = [letter for letter in str(i*j)]
             halfway = round(len(str_mult) / 2)
             if str_mult[:halfway] == str_mult[::-1][:halfway]:
-                return int(i * j)
+                return (i,j,int(i * j))
     return 'No palindromes found... :('
             
 
-print(solution(100,1200))
+print(solution(100,1000))
 
